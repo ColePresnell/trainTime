@@ -1,0 +1,22 @@
+.jumbotron {
+    background: url("images/thomasBanner.jpg");
+    border: solid 4px;
+    border-color: red;
+}
+
+body {
+    background: url("images/islandBackground.png");
+}
+
+h1 {
+    text-align: center;
+    background-color: blue;
+    border-radius: 15px;
+    color: white;
+    
+}
+
+#add-train-btn {
+    background-color: blue;
+    border: 1px solid red;
+}

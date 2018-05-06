@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/"
+        crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet"> -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">THOMAS THE TANK ENGINE SCHEDULE</h1>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Island of Sodor: Arrivals and Departures</h2>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover" id="train-table">
+                            <tread>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </tread>
+                            <tbody id="mainTable"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Add Train</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="train-name-input">Train Name</label>
+                                <input type="text" class="form-control" id="train-name-input">
+                                <label for="train-destination-input">Destination</label>
+                                <input type="text" class="form-control" id="train-destination-input">
+                                <label for="train-start-input">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="train-start-input">
+                                <label for="train-frequency-input">Frequency (min)</label>
+                                <input type="text" class="form-control" id="train-frequency-input">
+                            </div>
+                            <button class="btn btn-primary btn-lg" id="add-train-btn" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="train.js"></script>
+</body>
+
+</html>
